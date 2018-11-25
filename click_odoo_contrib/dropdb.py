@@ -27,4 +27,5 @@ def main(env, dbname, if_exists=False):
             return
         else:
             raise click.ClickException(msg)
+    odoo.tools.config["list_db"] = True  # enable database manager
     odoo.service.db.exp_drop(dbname)
